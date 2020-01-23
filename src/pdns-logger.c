@@ -25,7 +25,7 @@ static globals_t globals;
 /* ************************************************************************ */
 
 static int engines_count = 0;
-static pdns_logger_t engines[3];
+static pdns_logger_t engines[4];
 
 pdns_status_t pdns_loggers_log(void *pbm) {
     int t;
@@ -58,6 +58,7 @@ static pdns_status_t loggers_initialize(const char *conf) {
     engines[engines_count++] = logfile_engine;
     engines[engines_count++] = syslog_engine;
     engines[engines_count++] = sqlite_engine;
+    engines[engines_count++] = jsonfile_engine;
 
     for (t = 0; t < engines_count; t++) {
         if (engines[t].start != NULL) {

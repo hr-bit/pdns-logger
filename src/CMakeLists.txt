@@ -20,6 +20,7 @@ SET(SOURCES
 
     pdns-logger-syslog.c
     pdns-logger-file.c
+    pdns-logger-jsonfile.c
     pdns-logger-protobuf.c
     pdns-logger-queue.c
     pdns-logger-dns.c

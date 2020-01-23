@@ -19,6 +19,14 @@ logfile=/var/log/pdns-logger/pdns.log
 force-flush=1           ; flush buffers to disk at each query
 
 
+[jsonfile]
+disabled = 1            ; should we disable the log-to-jsonfile backend ?
+only-rewrites=1         ; log only RPZ rewrites
+                        ; what is the path of our log file ?
+logfile=/var/log/pdns-logger/pdns-json.log
+force-flush=1           ; flush buffers to disk at each query
+
+
 [syslog]
 disabled = 1            ; Should we disable the syslog backend ?
 only-rewrites=1         ; log only RPZ rewrites
